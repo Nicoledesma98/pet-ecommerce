@@ -1,0 +1,22 @@
+.bgnavbar {
+    background-color: red;
+}
+.navbarlink {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+          
+}
+.links {
+    padding-right: 10px;
+}
+.titulo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 60vh;
+    font-size: 35px;
+}
