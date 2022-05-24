@@ -1,22 +1,12 @@
-.bgnavbar {
-    background-color: red;
-}
-.navbarlink {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
-          
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .links {
     padding-right: 10px;
 }
-.titulo {
+.prueba {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: 60vh;
-    font-size: 35px;
+    justify-content: space-between;
 }

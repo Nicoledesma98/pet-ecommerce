@@ -1,43 +1,28 @@
 import * as React from 'react';
-import './NavBar.css';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import { Link } from '@mui/material';
+import "./NavBar.css";
+import { Navbar,Container,Nav } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Carrito from '../CartWidget/CartWidget';
-
-
 
 const NavBar = () => {
   return (
-    <Box sx={{ flexGrow: 2 }}>
-      <AppBar position="static">
-        <Toolbar className=''>
-          <Link href="#" underline="hover" color="inherit" className='links'>
-           Inicio
-          </Link>
-          <Link href="#" underline="hover" color="inherit" className='links'>
-            Servicios
-          </Link>
-          <Link href="#" underline="hover" color="inherit" className='links' >
-            Nosotros
-          </Link>
-          <Link href="#" underline="hover" color="inherit" className='links'>
-            Como llegar
-          </Link>
-          <div className='titulo'>Pet Society</div>
-           <Carrito/>
-          </Toolbar>
-      </AppBar>
-    </Box>
+    <Navbar bg="primary" variant="dark" expand="lg">
+    <Container className="">
+      <Navbar.Brand className='' href="#home">Pet Society</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="">
+          <Nav.Link className='' href="#Inicio">Inicio</Nav.Link>
+          <Nav.Link href="#Productos">Productos</Nav.Link>
+          <Nav.Link href="#Como llegar">Productos</Nav.Link>
+          <Nav.Link href="#Quienes somos">Quienes somos</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+      <Carrito/>
+    </Container>
+  </Navbar>
   );
 }
-function ItemListContainer () {
-  return (
-<div>
-  <h1 color='red'>MI CATALOGO</h1>
-</div>
-  );
-}
+
 export default NavBar
-export {ItemListContainer}
+

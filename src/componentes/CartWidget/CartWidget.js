@@ -1,13 +1,10 @@
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import './CartWidget.css';
+import {Cart} from 'react-bootstrap-icons'
 
 function Carrito() {
     return (
-      <IconButton aria-label="cart" className='changuito'> 
-          <ShoppingCartIcon />
-      </IconButton>
+      <Cart aria-label="cart" className=''> 
+      </Cart>
     );
   }
   export default Carrito
