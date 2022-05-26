@@ -1,25 +1,53 @@
 import React from "react";
-import CardItem from "../Card/Card";
+
+const ItemListContainer =({ }) => {
+      const productos = [
+          {
+              title : "collar de perro",
+              precio : 800,
+              description :"",
+              stock : 2,
+              id : 1
+
+          },
+
+          {
+            title : "collar de gato",
+            precio : 300,
+            description :"",
+            stock : 10,
+            id : 2
+
+        },
+        {
+            title : "pretal de perro",
+            precio : 500,
+            description :"",
+            stock : 5,
+            id : 3
+
+        },
+        {
+            title : "pretal de gato",
+            precio : 500,
+            description :"",
+            stock : 6,
+            id : 4
+
+        }
+      ]
+
+}
+
+const getProducts = () => {
+    return new Promise ((resolve, reject) => {
+        resolve(productos)
+    })
+}
+getProducts ()
+.then ((res)=> {
+    console.log ("respuesta promesa", Response)
+})
 
 
-function ItemListContainer() {
-    return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-3">
-                    <CardItem title={"Collar de perro"} pesos="$800" stock={2}/>
-                </div>
-                <div className="col-md-3">
-                    <CardItem title={"Collar de gato"} pesos="$300" stock={10}/>
-                </div>
-                <div className="col-md-3">
-                    <CardItem title={"Pretal para perro"} pesos="$500"stock={8}/>
-                </div>
-                <div className="col-md-3">
-                    <CardItem title={"Pretal para gato"} pesos="$500" stock={6} />
-                </div>
-            </div>
-        </div>
-    )
-} 
 export default ItemListContainer

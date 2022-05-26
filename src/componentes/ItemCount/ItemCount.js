@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { Button } from "bootstrap"
-        
-const ItemCount =({stock}) => {
+import { Button } from "react-bootstrap"
+
+const ItemCount = ({ stock }) => {
 
     const [count, setCount] = useState(0)
     const addCount = () => {
@@ -16,15 +16,15 @@ const ItemCount =({stock}) => {
     }
     return (
 
-        <>
-    <div className="d-flex justify-content-center align-items-baseline">
-    <Button className="px-5" onClick={removeCount}>-</Button>
-    <p className="m-2">{count}</p>
+        
+            <div className="d-flex justify-content-center align-items-baseline">
+                <Button className="px-5" onClick={removeCount}>-</Button>
+                <p className="m-2">{count}</p>
 
-    <Button className="px-5" onClick={addCount}>+</Button>
-    <p>stock: {stock}</p>
-</div>
-    </>
+                <Button className="px-5" onClick={addCount}>+</Button>
+                <p>stock: {stock}</p>
+            </div>
+        
     )
 }
 

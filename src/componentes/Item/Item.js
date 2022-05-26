@@ -10,9 +10,9 @@ const CardItem = ({ title, pesos }) => {
                     <Card.Text>
                         {pesos}
                     </Card.Text>
-                    <ItemCount/>
                     <Button className="px-5" variant="primary">Detalle</Button>
                     <Button className="px-5">Comprar</Button>
+                    <ItemCount stock={5} />
                 </Card.Body>
             </Card>
 
