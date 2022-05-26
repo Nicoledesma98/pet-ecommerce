@@ -3,8 +3,11 @@ import {Cart} from 'react-bootstrap-icons'
 
 function Carrito() {
     return (
-      <Cart aria-label="cart" className=''> 
+      <button className='bg-primary'>
+        <Cart aria-label="cart" className=''> 
       </Cart>
+      </button>
+      
     );
   }
   export default Carrito
