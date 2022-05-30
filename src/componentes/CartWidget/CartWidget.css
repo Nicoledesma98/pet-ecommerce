@@ -1,0 +1,13 @@
+.bgbuttoncarrito {
+    background-color: rgb(249, 206, 238);
+    color: black;
+    border: 9px dotted  white;
+}
+
+.back {
+    background: rgb(249, 206, 238);
+}
+
+.carrito {
+    width: 10rem;
+}

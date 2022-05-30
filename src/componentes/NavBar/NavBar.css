@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: rgb(204, 243, 238);
 }
 .links {
     padding-right: 10px;
@@ -9,4 +10,8 @@
 .prueba {
     display: flex;
     justify-content: space-between;
+}
+
+.bgnavbar {
+    background:rgb(249, 206, 238);
 }

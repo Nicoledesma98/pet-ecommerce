@@ -1,18 +1,19 @@
-import { Card, Button } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 import ItemCount from "../ItemCount/ItemCount"
-const CardItem = ({ title, pesos }) => {
+import "./Item.css"
+const CardItem = ({ title, pesos,imagen,stock}) => {
     return (
         <div>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="./collar.jpg" />
+                <Card.Img variant="top" src={imagen} />
                 <Card.Body >
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         {pesos}
                     </Card.Text>
-                    <Button className="px-5" variant="primary">Detalle</Button>
-                    <Button className="px-5">Comprar</Button>
-                    <ItemCount stock={5} />
+                    <button className="px-5 bgbutton" variant="primary">Detalle</button>
+                    <button className="mt-2 px-5 bgbutton">Comprar</button>
+                    <ItemCount stock={stock} />
                 </Card.Body>
             </Card>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Button } from "react-bootstrap"
+import "./ItemCount.css"
 
 const ItemCount = ({ stock }) => {
 
@@ -18,11 +18,10 @@ const ItemCount = ({ stock }) => {
 
         
             <div className="d-flex justify-content-center align-items-baseline">
-                <Button className="px-5" onClick={removeCount}>-</Button>
+                <button className="px-5 bgbutton mt-2" onClick={removeCount}>-</button>
                 <p className="m-2">{count}</p>
 
-                <Button className="px-5" onClick={addCount}>+</Button>
-                <p>stock: {stock}</p>
+                <button className="px-5 bgbutton mt-2" onClick={addCount}>+</button>
             </div>
         
     )
