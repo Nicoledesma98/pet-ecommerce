@@ -2,7 +2,7 @@ import React from "react";
 import CardItem from "../Item/Item";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
-function ItemList({productos}) {
+function ItemList({}) {
     return (
         <div className="container">
             <div className="row">
@@ -10,8 +10,21 @@ function ItemList({productos}) {
                     Collar para tu perro!
                 </h1>
                 <div className="col-md-3">
-                    <ItemListContainer/>
-                    <CardItem title={"Collar"} pesos="$800" stock={2} imagen="./collar.jpg" productos={productos}/> 
+                    <> 
+                    {
+                     product.map( (productos) =>{
+                         return (
+                             <div>
+                                 
+                             </div>
+                         )
+                     } )
+                    }
+                   
+                    <ItemListContainer product={"product"}/>
+                    <CardItem title={"Collar"} pesos="$800" stock={2} imagen="./collar.jpg" /> 
+                    </>
+                    
                 </div>
                
             </div>

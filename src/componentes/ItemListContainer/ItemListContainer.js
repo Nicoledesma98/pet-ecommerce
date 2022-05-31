@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
-const ItemListContainer = ({ }) => {
+
+
+const ItemListContainer = ({product }) => {
     const [products, setProducts] = useState([])
     const productos = [
         {
-            title: "collar de perro",
+            title: "Collar de perro",
             precio: 800,
             description: "",
             stock: 2,
+            image: "",
             id: 1
+
 
         },
 
         {
-            title: "collar de gato",
+            title: "Collar rosa",
             precio: 300,
             description: "",
             stock: 10,
@@ -20,7 +24,7 @@ const ItemListContainer = ({ }) => {
 
         },
         {
-            title: "pretal de perro",
+            title: "Ac/Dc",
             precio: 500,
             description: "",
             stock: 5,
@@ -28,7 +32,7 @@ const ItemListContainer = ({ }) => {
 
         },
         {
-            title: "pretal de gato",
+            title: "Collar de cuero",
             precio: 500,
             description: "",
             stock: 6,
@@ -57,6 +61,7 @@ useEffect(()=>{
 
 
 }
+
 
 
 
