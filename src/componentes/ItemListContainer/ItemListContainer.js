@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ItemList from "../ItemList/ItemList";
 
 
 const ItemListContainer = ({product }) => {
@@ -6,10 +7,10 @@ const ItemListContainer = ({product }) => {
     const productos = [
         {
             title: "Collar de perro",
-            precio: 800,
+            price: 800,
             description: "",
             stock: 2,
-            image: "",
+            image:"collar.jpg",
             id: 1
 
 
@@ -17,25 +18,28 @@ const ItemListContainer = ({product }) => {
 
         {
             title: "Collar rosa",
-            precio: 300,
+            price: 300,
             description: "",
             stock: 10,
+            image:"./collar-perro-rosa.jpg",
             id: 2
 
         },
         {
             title: "Ac/Dc",
-            precio: 500,
+            price: 500,
             description: "",
             stock: 5,
+            image:"collar-perro-rock.jpg",
             id: 3
 
         },
         {
             title: "Collar de cuero",
-            precio: 500,
+            price: 500,
             description: "",
             stock: 6,
+            image:"collar-perro-cuero.jpg",
             id: 4
 
         }
@@ -57,11 +61,9 @@ useEffect(()=>{
         })
 },[])
    
-
-
+return (<div><ItemList products={products}/></div>); 
 
 }
-
 
 
 

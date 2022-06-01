@@ -1,28 +1,24 @@
 import React from "react";
 import CardItem from "../Item/Item";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
-function ItemList({}) {
+function ItemList({ products }) {
     return (
         <div className="container">
-            <div className="row">
+            <div className="row row-cols-1 row-cols-md-1 g-4 ">
                 <h1>
                     Collar para tu perro!
                 </h1>
-                <div className="col-md-3">
-                    <> 
-                    {
-                     product.map( (productos) =>{
+                <div className="card-group mx-5">
+                    <>
+                    { products.map( (product) =>{
                          return (
-                             <div>
-                                 
-                             </div>
+                             <CardItem key={product.id} title={product.title} price={product.price} stock={product.stock} image={product.image}/> 
                          )
                      } )
                     }
                    
-                    <ItemListContainer product={"product"}/>
-                    <CardItem title={"Collar"} pesos="$800" stock={2} imagen="./collar.jpg" /> 
+                    
+                    
                     </>
                     
                 </div>
@@ -32,14 +28,3 @@ function ItemList({}) {
     )
 } 
 export default ItemList
-
-
-{/* <div className="col-md-3">
-                    <CardItem title={"Collar hembra"} pesos="$300" stock={10} imagen="./collar-perro-rosa.jpg"/>
-                </div>
-                <div className="col-md-3">
-                    <CardItem title={"Collar Ac/Dc"} pesos="$500"stock={8} imagen="./collar-perro-rock.jpg"/>
-                </div>
-                <div className="col-md-3">
-                    <CardItem title={"Collar de cuero"} pesos="$500" stock={6} imagen="./collar-perro-cuero.jpg" />
-                </div> */}
