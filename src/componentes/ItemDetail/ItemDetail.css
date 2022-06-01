@@ -1,0 +1,11 @@
+.bordeporlados{
+    border: 5px inset rgb(249, 206, 238);
+    background-color: rgb(249, 206, 238);
+    color: black;
+ }
+
+ .bgbuttond {
+    background-color: rgb(249, 206, 238);
+    color: black;
+    border: 5px inset rgb(249, 206, 238);
+}

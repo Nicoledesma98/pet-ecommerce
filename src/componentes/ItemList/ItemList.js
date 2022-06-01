@@ -1,5 +1,6 @@
 import React from "react";
 import CardItem from "../Item/Item";
+import ItemDetailConntainer from "../ItemDetailContainer/ItemDetailContainer";
 
 function ItemList({ products }) {
     return (
@@ -15,14 +16,10 @@ function ItemList({ products }) {
                              <CardItem key={product.id} title={product.title} price={product.price} stock={product.stock} image={product.image}/> 
                          )
                      } )
-                    }
-                   
-                    
-                    
+                    } 
                     </>
-                    
                 </div>
-               
+               <ItemDetailConntainer/>
             </div>
         </div>
     )
