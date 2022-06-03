@@ -14,4 +14,6 @@
 
 .bgnavbar {
     background:rgb(249, 206, 238);
+    text-decoration: none;
+    color: black;
 }

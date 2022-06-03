@@ -11,8 +11,8 @@ const ItemDetail = ({ data,stock }) => {
                 <div className="col-md-6">
                     <h2 className="bordeporlados">{data.title}</h2>
                     <div className="my-5">
-                        Elija el talle segun el tamaño de su perro:
-                        <select class="form-select bgbuttond" aria-label="Default select example">
+                        <p>Elija el talle segun el tamaño de su perro:</p> 
+                        <select className=" bgbuttond" aria-label="Default select example">
                             <option className="bgbuttond" value="1">Pequeño</option>
                             <option className="bgbuttond" value="2">Mediano</option>
                             <option className="bgbuttond" value="3">Grande</option>
