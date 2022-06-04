@@ -7,3 +7,9 @@
 .bgimage {
     background: transparent;
 }
+
+.bglink {
+    background-color: rgb(249, 206, 238);
+    text-decoration: none;
+    color: black;
+}

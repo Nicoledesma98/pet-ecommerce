@@ -6,6 +6,7 @@ import Carrito from '../CartWidget/CartWidget';
 
 const NavBar = () => {
   return (
+
     <nav className="navbar navbar-expand-lg navbar-light bgnavbar fixed-top">
       <div className="container-fluid bgnavbar">
         <a className="navbar-brand bgnavbar" href="#">PetSociety</a>
@@ -19,19 +20,21 @@ const NavBar = () => {
                <Link to={"/"} className="bgnavbar">Inicio</Link> 
                 </a>
             </li>
-            <li className="nav-item">
+            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+              <li className="nav-item">
               <a className="nav-link bgnavbar">
-               <Link to={"/products"} className="bgnavbar">Productos</Link> 
+               <Link to={"/products/category"} className="bgnavbar">Productos</Link> 
                 </a>
-            </li>
-            <li className="nav-item">
+                 </li>
+            </ul>
+            <li>
               <a className="nav-link bgnavbar">
                 <Link to={"/comollegar"} className="bgnavbar">Como llegar</Link>
               </a>
             </li>
-            <li className="nav-item">
+            <li>
               <a className="nav-link bgnavbar">
-                <Link to={"/contacto"} className="bgnavbar">Contacto</Link>
+                <Link to={"/Contacto"} className="bgnavbar">Contacto</Link>
               </a>
             </li>
 

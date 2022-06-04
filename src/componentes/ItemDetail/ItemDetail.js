@@ -5,10 +5,10 @@ const ItemDetail = ({ data,stock }) => {
     return (
         <div className="Container">
             <div className="row">
-                <div className="col-md-6 ">
+                <div className="col-md-6 mt-5 ">
                     <img style={{ width: '30rem' }} src={data.image}></img>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 mt-5">
                     <h2 className="bordeporlados">{data.title}</h2>
                     <div className="my-5">
                         <p>Elija el talle segun el tamaño de su perro:</p> 

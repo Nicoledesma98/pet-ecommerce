@@ -13,13 +13,15 @@ function ItemList({ products }) {
                     <>
                     { products.map( (product) =>{
                          return (
-                             <CardItem key={product.id} title={product.title} price={product.price} stock={product.stock} image={product.image}/> 
+                             <div key={product.id}>
+                                 <CardItem  title={product.title} price={product.price} stock={product.stock} image={product.image} id={product.id}/> 
+                             </div>
+                             
                          )
                      } )
                     } 
                     </>
                 </div>
-               <ItemDetailConntainer/>
             </div>
         </div>
     )
