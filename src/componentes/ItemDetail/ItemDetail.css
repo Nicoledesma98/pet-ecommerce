@@ -9,3 +9,12 @@
     color: black;
     border: 5px inset rgb(249, 206, 238);
 }
+
+.bordertop {
+    border: 5px dashed  white;
+}
+
+.nico{
+    background-color: white;
+    border: 3px dashed rgb(249, 206, 238) ;
+}
