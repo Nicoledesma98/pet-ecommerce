@@ -5,7 +5,7 @@ import "./Item.css"
 const CardItem = ({ title, image, price, stock, id}) => {
     return (
         <div>
-            <Card className="m-2 " style={{ width: '18rem' }}>
+            <Card className="m-2 bgcard " style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={image} />
                 <Card.Body >
                     <Card.Title>{title}</Card.Title>

@@ -13,3 +13,7 @@
     text-decoration: none;
     color: black;
 }
+
+.bgcard {
+    border: 2px dashed  rgb(249, 206, 238);
+}
