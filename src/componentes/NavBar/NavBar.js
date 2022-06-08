@@ -15,28 +15,22 @@ const NavBar = () => {
         <div className="collapse navbar-collapse bgnavbar" id="navbarNavDropdown">
           <ul className="navbar-nav bgnavbar">
             <li className="nav-item bgnavbar">
-              <a className="nav-link active bgnavbar" aria-current="page">
-               <Link to={"/"} className="bgnavbar">Inicio</Link> 
-                </a>
+               <Link to={"/"} className="nav-link active bgnavbar">Inicio</Link>              
             </li>
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-              <li className="nav-item">
-              <a className="nav-link bgnavbar">
-               <Link to={"/products/category"} className="bgnavbar">Productos</Link> 
-                </a>
+              <li className="nav-item"><Link to={"/product"} className="nav-link bgnavbar">Productos</Link> 
+                 </li>
+                 <li className="nav-item"><Link to={"categorias/perro"} className="nav-link bgnavbar">Perros</Link>
+                 </li>
+                 <li className="nav-item"><Link to={"categorias/gato"} className="nav-link bgnavbar">Gatos</Link>
                  </li>
             </ul>
             <li>
-              <a className="nav-link bgnavbar">
-                <Link to={"/comollegar"} className="bgnavbar">Como llegar</Link>
-              </a>
+                <Link to={"/comollegar"} className="nav-link bgnavbar">Como llegar</Link>
             </li>
             <li>
-              <a className="nav-link bgnavbar">
-                <Link to={"/Contacto"} className="bgnavbar">Contacto</Link>
-              </a>
+                <Link to={"/Contacto"} className="nav-link bgnavbar">Contacto</Link>
             </li>
-
           </ul>
         </div>
       </div>

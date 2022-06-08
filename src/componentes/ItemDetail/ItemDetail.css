@@ -8,6 +8,7 @@
     background-color: rgb(249, 206, 238);
     color: black;
     border: 5px inset rgb(249, 206, 238);
+    text-decoration: none;
 }
 
 .bordertop {

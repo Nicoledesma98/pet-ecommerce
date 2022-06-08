@@ -1,8 +1,15 @@
 import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
+import { useState } from "react"
+import { Link } from "react-router-dom"
+
 const ItemDetail = ({ data, stock }) => {
 
     console.log("data desde itemdetail:", data, "el stock es", stock)
+
+    const [cantidad, setCantidad] = useState(1)
+    const [showButton, setShowButton] = useState(false)
+
     return (
         <div className="Container">
             <div className="row">
@@ -24,11 +31,15 @@ const ItemDetail = ({ data, stock }) => {
                         </select>
                     </div>
                     <p className="nico py-5">{data.description}</p>
+                     {!showButton ?
                     <p className="">Seleccione la cantidad:
-                        <ItemCount stock={stock} />
+                        <ItemCount setCantidad={setCantidad} cantidad={cantidad} setShowButton={setShowButton} />
                     </p>
-                    <button className="mt-2 px-5 bgbutton">Comprar</button>
+                    : 
+                    <button><Link to={"/cart"} className="bgbuttond">Terminar compra</Link></button>}
+                    
                 </div>
+                
             </div>
         </div>  
     )
