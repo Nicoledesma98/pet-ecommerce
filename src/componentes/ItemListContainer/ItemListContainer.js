@@ -3,9 +3,10 @@ import ItemList from "../ItemList/ItemList";
 import productos from "../../utils/productsMock";
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({product }) => {
+const ItemListContainer = ({ }) => {
     const [products, setProducts] = useState([])
     const {categoria} = useParams() ;
+    console.log(categoria)
     const getProducts = () => {
         return new Promise((resolve, reject) => {
 
@@ -24,8 +25,8 @@ const ItemListContainer = ({product }) => {
     }
 useEffect(()=>{
      getProducts()
-        .then((res) => {
-            setProducts(res)
+        .then((response) => {
+            setProducts(response)
         })
 },[categoria])
    console.log ("esto es la categoria", categoria)

@@ -8,9 +8,11 @@ import Contacto from './pages/Contact';
 import ComoLlegar from './pages/ComoLlegar';
 import Detalle from './pages/Detalle';
 import ProductList from './pages/ProductList';
+import { CartProvider } from "./context/CartContext"
 function App() {
   return (
     <div className="App">
+      <CartProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -23,6 +25,7 @@ function App() {
           <Route path="/categorias/:category" element={<ProductList/>}/>
         </Routes>        
       </BrowserRouter>
+      </CartProvider>
     
             
 </div>

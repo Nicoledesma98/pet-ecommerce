@@ -1,8 +1,12 @@
 import { Card } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
+import { useContext } from "react"
+import CartContext from "../../context/CartContext"
 import "./Item.css"
 const CardItem = ({ title, image, price, stock, id}) => {
+    const {addItemCart } = useContext(CartContext)
+
     return (
         <div>
             <Card className="m-2 bgcard " style={{ width: '18rem' }}>
@@ -10,11 +14,10 @@ const CardItem = ({ title, image, price, stock, id}) => {
                 <Card.Body >
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
-                        {price}
+                      ${price}
                     </Card.Text>
                     <button className="px-5 bgbutton" variant="primary"><Link className="bglink" to={`/product/${id}`}>Detalle</Link></button>
-                    <button className="mt-2 px-5 bgbutton">Comprar</button>
-                    <ItemCount stock={stock} />
+                    <button className="mt-2 px-5 bgbutton" onClick={() =>addItemCart({title, image, price, stock, id})}>Comprar</button>
                 </Card.Body>
             </Card>
 
