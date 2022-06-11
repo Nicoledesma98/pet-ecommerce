@@ -1,0 +1,16 @@
+.formulario {
+    border: 2px dashed white;
+    margin-top: 20vh;
+}
+.backgroundform {
+    background: rgb(151,196,184);
+background: linear-gradient(90deg, rgba(151,196,184,1) 11%, rgba(204,243,238,1) 21%, rgba(249,243,238,1) 47%, rgba(249,206,238,1) 72%);
+}
+
+.bgtransparent {
+    background-color: transparent;
+}
+.bginput {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.418);
+}

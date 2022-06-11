@@ -9,6 +9,7 @@ import ComoLlegar from './pages/ComoLlegar';
 import Detalle from './pages/Detalle';
 import ProductList from './pages/ProductList';
 import { CartProvider } from "./context/CartContext"
+import Footer from './componentes/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -23,7 +24,8 @@ function App() {
           <Route path="/product" element={<ItemListContainer/>}/>
           <Route path="/product/:id" element={<Detalle/>}/>
           <Route path="/categorias/:category" element={<ProductList/>}/>
-        </Routes>        
+        </Routes>   
+        <Footer/>
       </BrowserRouter>
       </CartProvider>
     

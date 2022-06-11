@@ -3,7 +3,9 @@
     color: black;
     border: 5px inset rgb(249, 206, 238);
 }
-
+.bgbutton:hover {
+    background-color: rgb(249, 243, 238);
+}
 .bgimage {
     background: transparent;
 }
@@ -13,7 +15,15 @@
     text-decoration: none;
     color: black;
 }
+.bglink:hover {
+    background-color: rgb(249, 243, 238);
+}
 
 .bgcard {
     border: 2px dashed  rgb(249, 206, 238);
 }
+
+.borderhome {
+    border-left:2px dashed  rgb(249, 206, 238);
+}
+
