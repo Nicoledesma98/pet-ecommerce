@@ -14,3 +14,11 @@ background: linear-gradient(90deg, rgba(151,196,184,1) 11%, rgba(204,243,238,1) 
     color: white;
     background-color: rgba(0, 0, 0, 0.418);
 }
+
+.marginb {
+    margin-top: 20vh;
+}
+
+.bordertable {
+    border: 2px dashed rgb(249, 206, 238) !important;
+}

@@ -10,6 +10,7 @@ import Detalle from './pages/Detalle';
 import ProductList from './pages/ProductList';
 import { CartProvider } from "./context/CartContext"
 import Footer from './componentes/Footer/Footer';
+import Cart from './pages/Cart';
 function App() {
   return (
     <div className="App">
@@ -18,12 +19,13 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="*" element={<NotFound/>}/>
+          <Route path='/cart' element={<Cart/>}/>
           <Route path="/" element={<Inicio/>}/>
           <Route path="/Contacto" element={<Contacto/>}/>
           <Route path="/comollegar" element={<ComoLlegar/>}/>
           <Route path="/product" element={<ItemListContainer/>}/>
           <Route path="/product/:id" element={<Detalle/>}/>
-          <Route path="/categorias/:category" element={<ProductList/>}/>
+          <Route path="/categoria/:category" element={<ProductList/>}/>
         </Routes>   
         <Footer/>
       </BrowserRouter>

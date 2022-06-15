@@ -3,10 +3,10 @@ import ItemList from "../ItemList/ItemList";
 import productos from "../../utils/productsMock";
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ }) => {
+const ItemListContainer = ({  }) => {
     const [products, setProducts] = useState([])
     const {categoria} = useParams() ;
-    console.log(categoria)
+    
     const getProducts = () => {
         return new Promise((resolve, reject) => {
 

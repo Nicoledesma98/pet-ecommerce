@@ -6,7 +6,8 @@ const productos = [
         stock: 2,
         image:"../collar.jpg",
         id: 1,
-        categoria: "perros"
+        categoria: "perros",
+        cantidad: ""
 
 
     },

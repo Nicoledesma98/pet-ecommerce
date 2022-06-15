@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react"
+import React from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({ stock,setCantidad, cantidad, onAdd}) => {
+const ItemCount = ({ setCantidad, cantidad, setShowButton}) => {
     
     const addCount = () => {
         // if (cantidad < stock) {
@@ -24,7 +24,7 @@ const ItemCount = ({ stock,setCantidad, cantidad, onAdd}) => {
 
                 <button className="px-5 bgbutton mt-2" onClick={addCount}>+</button>
             </div>
-        <button className="mt-2 px-5 bgbutton" onClick={() => {onAdd (cantidad)}}>Agregar al Carrito</button>
+            <button className="mt-2 px-5 bgbutton" onClick={() => setShowButton(true)}>Agregar al Carrito</button>
         </>
     )
 }

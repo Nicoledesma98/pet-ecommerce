@@ -1,8 +1,9 @@
 import React from "react";
 import CardItem from "../Item/Item";
-import ItemDetailConntainer from "../ItemDetailContainer/ItemDetailContainer";
 import "./ItemList.css"
-function ItemList({ products }) {
+function ItemList({ products ,title }) {
+
+    
     return (
         <div className="container">
             <div className="row row-cols-1 row-cols-md-1 g-4 ">
@@ -14,7 +15,14 @@ function ItemList({ products }) {
                     { products.map( (product) =>{
                          return (
                              <div key={product.id}>
-                                 <CardItem  title={product.title} price={product.price} stock={product.stock} image={product.image} id={product.id} categoria={product.categoria}/> 
+                                 <CardItem  
+                                 title={product.title} 
+                                 price={product.price} 
+                                 stock={product.stock} 
+                                 image={product.image} 
+                                 id={product.id} 
+                                 cantidad={product.cantidad}
+                                 categoria={product.categoria}/> 
                              </div>
                              
                          )
