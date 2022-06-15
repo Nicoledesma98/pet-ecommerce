@@ -8,7 +8,7 @@ const NavBar = () => {
 
     <nav className="navbar navbar-expand-lg navbar-light bgnavbar fixed-top">
       <div className="container-fluid bgnavbar">
-        <Link className="navbar-brand bgnavbar">PetSociety</Link>
+        <Link to={"/"} className="navbar-brand bgnavbar">PetSociety</Link>
         <button className="navbar-toggler bgnavbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon bgnavbar"></span>
         </button>
