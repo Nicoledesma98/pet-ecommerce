@@ -20,9 +20,9 @@ const NavBar = () => {
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
               <li className="nav-item"><Link to={"/product"} className="nav-link bgnavbar">Productos</Link> 
                  </li>
-                 <li className="nav-item"><Link to={"categoria/perro"} className="nav-link bgnavbar">Perros</Link>
+                 <li className="nav-item"><Link to={"categoria/perros"} className="nav-link bgnavbar">Perros</Link>
                  </li>
-                 <li className="nav-item"><Link to={"categoria/gato"} className="nav-link bgnavbar">Gatos</Link>
+                 <li className="nav-item"><Link to={"categoria/gatos"} className="nav-link bgnavbar">Gatos</Link>
                  </li>
             </ul>
             <li>

@@ -12,8 +12,8 @@ const Footer = () => {
                         <ul className="list-unstyled text-muted bgnavbar">
                             <li className="bgnavbar"><Link to={"/"} className="bgnavbar">Inicio</Link></li>
                             <li className="bgnavbar"><Link to={"/product"} className="bgnavbar">Productos</Link></li>
-                            <li className="bgnavbar"><Link to={"categorias/perro"} className="bgnavbar">Perro</Link></li>
-                            <li className="bgnavbar"><Link to={"categorias/gato"} className="bgnavbar">Gato</Link></li>
+                            <li className="bgnavbar"><Link to={"categoria/perros"} className="bgnavbar">Perros</Link></li>
+                            <li className="bgnavbar"><Link to={"categoria/gatos"} className="bgnavbar">Gatos</Link></li>
                             <li className="bgnavbar"><Link to={"/comollegar"} className="bgnavbar">Como llegar</Link></li>
                             <li className="bgnavbar"><Link to={"/Contacto"} className="bgnavbar">Contacto</Link></li>
                         </ul>

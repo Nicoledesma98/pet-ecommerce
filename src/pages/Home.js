@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemListContainer from "../componentes/ItemListContainer/ItemListContainer"
 
 const Inicio = () => {
     
@@ -8,7 +9,7 @@ const Inicio = () => {
            <h1>Bienvenidos a PetSociety</h1>
            <h6 className='mt-4 '>Aquí encontrarás los mejores y más lindos accesorios para mascotas</h6>
         </div>
-        
+        <ItemListContainer title={"Productos recomendados"}/>
         <div className='container mt-5'>
             <div className='row'>
                 <div className='col-md-4 borderhome'>

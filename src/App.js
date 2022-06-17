@@ -25,7 +25,7 @@ function App() {
           <Route path="/comollegar" element={<ComoLlegar/>}/>
           <Route path="/product" element={<ItemListContainer/>}/>
           <Route path="/product/:id" element={<Detalle/>}/>
-          <Route path="/categoria/:category" element={<ProductList/>}/>
+          <Route path="/categoria/:category" element={<ItemListContainer/>}/>
         </Routes>   
         <Footer/>
       </BrowserRouter>

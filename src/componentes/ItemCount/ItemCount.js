@@ -1,13 +1,14 @@
 import React from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({ setCantidad, cantidad, setShowButton}) => {
+const ItemCount = ({ setCantidad, cantidad, setShowButton,stock}) => {
     
     const addCount = () => {
-        // if (cantidad < stock) {
+        if (cantidad < stock) {
             setCantidad(cantidad + 1)
         
     }
+}
 
     const removeCount = () => {
         if (cantidad > 0) {

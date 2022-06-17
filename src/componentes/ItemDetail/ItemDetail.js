@@ -2,7 +2,7 @@ import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import { useState } from "react"
 import { Link } from "react-router-dom"
-const ItemDetail = ({ data, stock }) => {
+const ItemDetail = ({ data }) => {
     // const {addItemCart } = useContext(CartContext)
     // const sendItem = (qty) => {
     //     addItemCart({...data, cantidad: qty})
@@ -35,7 +35,7 @@ const ItemDetail = ({ data, stock }) => {
                     <p className="nico py-5">{data.description}</p>
                      {!showButton ?
                     <p className="">Seleccione la cantidad:
-                        <ItemCount setCantidad={setCantidad} cantidad={cantidad} setShowButton={setShowButton} />
+                        <ItemCount setCantidad={setCantidad} cantidad={cantidad} setShowButton={setShowButton} stock={data.stock} />
                     </p>
                     : 
                     <button><Link to={"/cart"} className="bgbuttond">Terminar compra</Link></button>}
