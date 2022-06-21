@@ -1,18 +1,27 @@
 import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import  productos from "../../utils/productsMock"
 import { useParams } from "react-router-dom"
+import { doc, getDoc } from "firebase/firestore"
+import db from "../../utils/firebaseConfig"
 
 const ItemDetailConntainer = () => {
     const { id } = useParams()
     const [item, setItem] = useState({})
+
+    
+
     useEffect(() => {
-        setItem(productFilter)
+    //    getProduct()
     }, [id])
 
-    const productFilter =  productos.find ((product) =>{
-        return product.id == id
-    })
+    // const getProduct = async() =>{
+    //     const docRef = doc(dBase, "productos",id)
+    //     const docSnaptshop = await
+    // }
+    
+    // const productFilter =  productos.find ((product) =>{
+    //     return product.id == id
+    // })
 
     return (
         <div>

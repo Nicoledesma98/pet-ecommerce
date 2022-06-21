@@ -3,11 +3,7 @@ import ItemCount from "../ItemCount/ItemCount"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 const ItemDetail = ({ data }) => {
-    // const {addItemCart } = useContext(CartContext)
-    // const sendItem = (qty) => {
-    //     addItemCart({...data, cantidad: qty})
-    // }
-    console.log("data desde itemdetail:", data)
+    
 
     const [cantidad, setCantidad] = useState(1)
     const [showButton, setShowButton] = useState(false)
