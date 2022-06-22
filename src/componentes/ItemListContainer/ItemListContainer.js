@@ -13,16 +13,31 @@ const ItemListContainer = ({ title }) => {
 
     useEffect(() => {
         setProducts([])
-        getProductos()
+        getProducts()
             .then( (productos) => {
-                console.log("productos: ", productos)
+                console.log("productosuseeffect: ", productos)
                 category ?  filterFirebase() : setProducts(productos)
 
 })}, [category])
 
+
+const getProducts = async () => {
+    const productCollection = collection(db, "productos")
+    const productSnapshot = await getDocs(productCollection);
+    const productList = productSnapshot.docs.map((doc) => {
+        let product = doc.data()
+        product.id = doc.id
+        console.log("product: ", product)
+        return product
+
+    })
+    return productList
+    console.log("productList: ", productList)
+}
+
 const filterFirebase = async () => {
     const productRef = collection(db, 'productos')
-    const queryResult = query(productRef, where("category", "==", category));
+    const queryResult = query(productRef, where("categoria", "==", category));
     const querySnapshot = await getDocs(queryResult);
     const productList = querySnapshot.docs.map((doc) => {
         let product = doc.data()
@@ -43,19 +58,8 @@ const filterFirebase = async () => {
 
 
 
-        const getProductos = async () => {
-            const productCollection = collection(db, "productos")
-            const productSnapshot = await getDocs(productCollection);
-            const productList = productSnapshot.docs.map((doc) => {
-                let product = doc.data()
-                product.id = doc.id
-                console.log("product: ", product)
-                return product
-
-            })
-            console.log("productList: ", productList)
-        }
-
+        
+         console.log("products:",products)
         return (<div><ItemList products={products} title={title} /></div>);
 
     }
