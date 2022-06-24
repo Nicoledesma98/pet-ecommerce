@@ -1,17 +1,27 @@
 .bgbuttoncarrito {
     background-color: rgb(249, 206, 238);
     color: black;
-    border: 5px dashed  white;
+    border: none;
+    position: relative;
+    
 }
 
 .back {
     background: rgb(249, 206, 238);
 }
 
-.carrito {
-    width: 10rem;
-}
-
 .modalback{
     background: transparent;
+}
+
+
+.alberto {
+    position: absolute;
+    border-radius: 50%;
+    background: red;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    left: 55%;
+    top: -10px;
 }

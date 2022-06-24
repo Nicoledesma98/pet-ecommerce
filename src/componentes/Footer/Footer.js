@@ -10,12 +10,12 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-2 col-md-6 bgnavbar">
                         <ul className="list-unstyled text-muted bgnavbar">
-                            <li className="bgnavbar"><Link to={"/"} className="bgnavbar">Inicio</Link></li>
-                            <li className="bgnavbar"><Link to={"/product"} className="bgnavbar">Productos</Link></li>
-                            <li className="bgnavbar"><Link to={"categoria/perros"} className="bgnavbar">Perros</Link></li>
-                            <li className="bgnavbar"><Link to={"categoria/gatos"} className="bgnavbar">Gatos</Link></li>
-                            <li className="bgnavbar"><Link to={"/comollegar"} className="bgnavbar">Como llegar</Link></li>
-                            <li className="bgnavbar"><Link to={"/Contacto"} className="bgnavbar">Contacto</Link></li>
+                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"/"} className="bgnavbar textnavbar">Inicio</Link></li>
+                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"/product"} className="bgnavbar textnavbar">Productos</Link></li>
+                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"categoria/perros"} className="bgnavbar textnavbar">Perros</Link></li>
+                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"categoria/gatos"} className="bgnavbar textnavbar">Gatos</Link></li>
+                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"/comollegar"} className="bgnavbar textnavbar">Como llegar</Link></li>
+                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"/Contacto"} className="bgnavbar textnavbar">Contacto</Link></li>
                         </ul>
                     </div>
                     <div className="col-lg-4 col-md-6 pt-4 bgnavbar">

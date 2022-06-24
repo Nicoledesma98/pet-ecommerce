@@ -1,22 +1,27 @@
 import * as React from 'react';
-import { Cart } from 'react-bootstrap-icons';
+import { Cart,Trash3Fill} from 'react-bootstrap-icons';
 import "./CartWidget.css";
 import { useState, useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CartContext from '../../context/CartContext';
+import {Link} from "react-router-dom"
 
 function Carrito() {
-  const { cartListItems,clearCart } = useContext(CartContext)
+  const { cartListItems,clearCart,deletProduct } = useContext(CartContext)
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <>
+    <div>
       <button onClick={handleShow} className='bgbuttoncarrito px-5'>
         <Cart aria-label="cart" className='back'></Cart>
+        <span className='alberto'>{cartListItems.length}</span>
       </button>
+      
+    </div>
       <Modal show={show} onHide={handleClose} className="modalback">
         <Modal.Header className='back' closeButton>
           <Modal.Title className='back'>Sus Productos</Modal.Title>
@@ -39,7 +44,9 @@ function Carrito() {
                 <div>
                 <span className="">su precio es:${item.price}</span>
                 </div>
-                <button className='bgbutton'>eliminar producto</button>
+                <button className='bgbutton' onClick={() => deletProduct(item)}>
+                <Trash3Fill/>
+                </button>
 
                 </div>
 
@@ -53,8 +60,7 @@ function Carrito() {
             Cerrar
           </Button>
           <Button className='bgbutton' onClick={clearCart}>Borrar todo!</Button>
-          <Button className='bgbutton' onClick={handleClose}>
-            Terminar compra!
+          <Button className="bgbutton" onClick={handleClose}><Link to={"/cart"} className="bgbuttond">Terminar compra</Link>
           </Button>
         </Modal.Footer>
       </Modal>

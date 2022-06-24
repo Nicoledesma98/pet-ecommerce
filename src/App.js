@@ -7,7 +7,6 @@ import Inicio from "./pages/Home";
 import Contacto from './pages/Contact';
 import ComoLlegar from './pages/ComoLlegar';
 import Detalle from './pages/Detalle';
-import ProductList from './pages/ProductList';
 import { CartProvider } from "./context/CartContext"
 import Footer from './componentes/Footer/Footer';
 import Cart from './pages/Cart';

@@ -7,7 +7,7 @@ import { addDoc, collection } from "firebase/firestore"
 import db from "../utils/firebaseConfig"
 import { Link } from "react-router-dom"
 const Cart = () => {
-  const { cartListItems, totalPrice,clearCart} = useContext(CartContext)
+  const { cartListItems, totalPrice,clearCart,deletProduct} = useContext(CartContext)
   const [formValue,setFormValue] = useState({
      nombre : " ",
      email : " ",
@@ -74,7 +74,7 @@ const Cart = () => {
                     <td>{title}</td>
                     <td>1</td>
                     <td>${price}</td>
-                    <td><button className="bgbutton p-4"><Trash className="bgtransparent" /></button></td>
+                    <td><button className="bgbutton p-4" onClick={()=> deletProduct (item)}><Trash className="bgtransparent" /></button></td>
                   </tr>
 
                 </tbody>

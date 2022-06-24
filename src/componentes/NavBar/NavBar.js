@@ -8,28 +8,28 @@ const NavBar = () => {
 
     <nav className="navbar navbar-expand-lg navbar-light bgnavbar fixed-top">
       <div className="container-fluid bgnavbar">
-        <Link to={"/"} className="navbar-brand bgnavbar">PetSociety</Link>
-        <button className="navbar-toggler bgnavbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon bgnavbar"></span>
-        </button>
+        <div className='logo'>
+          <Link to={"/"} className="navbar-brand logo"><img src='../logo2.png' className='logo'/></Link>
+        </div>
+        
         <div className="collapse navbar-collapse bgnavbar" id="navbarNavDropdown">
           <ul className="navbar-nav bgnavbar">
             <li className="nav-item bgnavbar">
-               <Link to={"/"} className="nav-link active bgnavbar">Inicio</Link>              
+               <Link to={"/"} className="nav-link active bgnavbar textnavbar">Inicio</Link>              
             </li>
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-              <li className="nav-item"><Link to={"/product"} className="nav-link bgnavbar">Productos</Link> 
+              <li className="nav-item"><Link to={"/product"} className="nav-link bgnavbar textnavbar">Productos</Link> 
                  </li>
-                 <li className="nav-item"><Link to={"categoria/perros"} className="nav-link bgnavbar">Perros</Link>
+                 <li className="nav-item"><Link to={"categoria/perros"} className="nav-link bgnavbar textnavbar">Perros</Link>
                  </li>
-                 <li className="nav-item"><Link to={"categoria/gatos"} className="nav-link bgnavbar">Gatos</Link>
+                 <li className="nav-item"><Link to={"categoria/gatos"} className="nav-link bgnavbar textnavbar">Gatos</Link>
                  </li>
             </ul>
             <li>
-                <Link to={"/comollegar"} className="nav-link bgnavbar">Como llegar</Link>
+                <Link to={"/comollegar"} className="nav-link bgnavbar textnavbar">Como llegar</Link>
             </li>
             <li>
-                <Link to={"/Contacto"} className="nav-link bgnavbar">Contacto</Link>
+                <Link to={"/Contacto"} className="nav-link bgnavbar textnavbar">Contacto</Link>
             </li>
           </ul>
         </div>

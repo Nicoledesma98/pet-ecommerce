@@ -1,7 +1,7 @@
 .bgbutton {
     background-color: rgb(249, 206, 238);
     color: black;
-    border: 5px inset rgb(249, 206, 238);
+    border-radius: 10px inset rgb(249, 206, 238);
 }
 .bgbutton:hover {
     background-color: rgb(249, 243, 238);
@@ -20,7 +20,8 @@
 }
 
 .bgcard {
-    border: 2px dashed  rgb(249, 206, 238);
+   
+     border: 2px dashed  rgb(249, 206, 238); 
 }
 
 .borderhome {

@@ -15,6 +15,23 @@
 .bgnavbar {
     background-color: rgb(249, 206, 238);
     text-decoration: none;
+    
+}
+.textnavbar {
+    text-decoration: none;
+    color: black;
+}
+.textnavbar:hover {
+    text-decoration: underline wavy;
     color: black;
 }
 
+.logo {
+    width: 50px;
+    background-color: rgb(249, 206, 238);
+}
+
+.huella {
+    width: 25px;
+    background-color: rgb(249, 206, 238);
+}
