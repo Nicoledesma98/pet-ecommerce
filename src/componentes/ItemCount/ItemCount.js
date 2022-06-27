@@ -1,8 +1,30 @@
 import React from "react"
 import "./ItemCount.css"
+import { useContext } from "react"
+import CartContext from '../../context/CartContext';
 
-const ItemCount = ({ setCantidad, cantidad, setShowButton,stock}) => {
-    
+
+const ItemCount = ({ setCantidad, cantidad, setShowButton,stock, data}) => {
+    const {addItemCart} =useContext(CartContext)
+    const product = {
+        id: data.id,
+        title: data.title,
+        image: data.image,
+        price: data.price,
+        stock: data.stock,
+        description: data.description,
+        category: data.category,
+        quantity: cantidad
+    }
+
+    const addProduct = () =>{
+        data.quantity += cantidad;
+        setShowButton(true)
+        addItemCart({data:product})
+
+
+    }
+
     const addCount = () => {
         if (cantidad < stock) {
             setCantidad(cantidad + 1)
@@ -25,10 +47,10 @@ const ItemCount = ({ setCantidad, cantidad, setShowButton,stock}) => {
 
                 <button className="px-5 bgbutton mt-2" onClick={addCount}>+</button>
             </div>
-            <button className="mt-2 px-5 bgbutton" onClick={() => setShowButton(true)}>Agregar al Carrito</button>
+            <button className="mt-2 px-5 bgbutton textfont" onClick={() => addProduct()}>Agregar al Carrito</button>
         </>
     )
 }
-
+// setShowButton(true).this(addItemCart)
 
 export default ItemCount

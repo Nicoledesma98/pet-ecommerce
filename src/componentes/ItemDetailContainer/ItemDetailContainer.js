@@ -20,7 +20,7 @@ const ItemDetailConntainer = () => {
     }, [id])
 
 const getProduct = async () => {
-    const docRef = doc(db, "productos", id)
+    const docRef = doc(db, "producto", id)
     const docSnaptshop = await getDoc(docRef)
     let product = docSnaptshop.data()
     product.id = docSnaptshop.id

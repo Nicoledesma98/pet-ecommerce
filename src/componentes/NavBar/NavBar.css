@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: rgb(204, 243, 238);
+    background: white;
 }
 .links {
     padding-right: 10px;
@@ -15,11 +15,13 @@
 .bgnavbar {
     background-color: rgb(249, 206, 238);
     text-decoration: none;
+    color: black;
     
 }
 .textnavbar {
     text-decoration: none;
     color: black;
+    font-family: 'Share Tech Mono', monospace;
 }
 .textnavbar:hover {
     text-decoration: underline wavy;
@@ -34,4 +36,8 @@
 .huella {
     width: 25px;
     background-color: rgb(249, 206, 238);
+}
+
+.textfont {
+    font-family: 'Share Tech Mono', monospace;
 }

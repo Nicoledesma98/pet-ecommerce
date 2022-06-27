@@ -1,25 +1,27 @@
 import React from 'react';
 import ItemListContainer from "../componentes/ItemListContainer/ItemListContainer"
 import {CashCoin,Lock, Truck } from 'react-bootstrap-icons';
-import { useState } from 'react';
-import { Carousel } from 'react-bootstrap';
+
 
 const Inicio = () => {
     
-        const [index, setIndex] = useState(0);
-      
-        const handleSelect = (selectedIndex, e) => {
-          setIndex(selectedIndex);
-        }
-
     return (
-        <div>
-            <div className='marginb d-flex justify-content-center align-items-center'>
-           <h1>Bienvenidos a</h1><img src='../logo2.png' className='pet'/>
+        <div className='col-md-12'>
+            <div className='marginb d-flex justify-content-center align-items-center textfont'>
+           <h1 className='me-5'>Bienvenidos a</h1><img src='../logo2.png' alt='logo' className='pet'/>
         </div>
-        <h6 className='mt-4 '>Aquí encontrarás los mejores y más lindos accesorios para mascotas</h6>
+        <h6 className='mt-4 textfont'>Aquí encontrarás los mejores y más lindos accesorios para mascotas</h6>
+
+        <div className='imagenes'>
+            <img src='../carrousel1.jpg'/>
+            <img src='../carrousel2.jpg'/>
+            <img src='../perro-acdc.jpg'/>
+            <img src='../pretal-gato.jpg'/>
+            <img src='../pretal-perro.jpg'/>
+
+        </div>
         <ItemListContainer title={"Productos recomendados"}/>
-        <div className='container mt-5'>
+        <div className='container mt-5 textfont'>
             <div className='row'>
                 <div className='col-md-4 borderhome'>
                     <h5><Truck className='icones'/>ENVÍOS A TODO EL PAÍS</h5>
@@ -34,7 +36,6 @@ const Inicio = () => {
                  <span>Transferencia bancaria, Mercado Pago, UALA, PagoFacil, RapiPago, BaproPagos, ProvinciaPagos, Ripsa, CobroExpress.</span>
                 </div>
             </div>
-
         </div>
         </div>
         

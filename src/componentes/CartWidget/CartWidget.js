@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CartContext from '../../context/CartContext';
 import {Link} from "react-router-dom"
+import { Table } from 'react-bootstrap';
 
 function Carrito() {
   const { cartListItems,clearCart,deletProduct } = useContext(CartContext)
@@ -18,7 +19,7 @@ function Carrito() {
     <div>
       <button onClick={handleShow} className='bgbuttoncarrito px-5'>
         <Cart aria-label="cart" className='back'></Cart>
-        <span className='alberto'>{cartListItems.length}</span>
+        <span className='widgetin'>{cartListItems.length}</span>
       </button>
       
     </div>
@@ -32,19 +33,47 @@ function Carrito() {
         <>
         <p className='back'>NO AGREGO NINGUN PRODUCTO!.</p>
         </>)}
+              
+        
           {cartListItems.map((item) => {
           return (
+        //   <div>
+        //     <Table responsive="sm">
+            
+        //              <thead>
+        //       <tr>
+        //         <th>producto</th>
+        //         <th>cantidad</th>
+        //         <th>precio</th>
+        //         <th>eliminar</th>
+        //       </tr>
+        //     </thead>
+            
+                 
+        //   <div>
+        // <tbody>
+        //   <tr>
+        //     <td><img style={{ width: '5rem' }} className="nico" src={item.image}/></td>
+        //     <td>Table cell</td>
+        //     <td>Table cell</td>
+        //     <td>Table cell</td>
+        //   </tr>
+        // </tbody>
+        //     </div>
+        //      </Table>
+        //      </div>
+        
             <div className="Container" key={item.id}>
               <div className="row">
                 <div className="col-md-8 mt-5">
-                  <img style={{ width: '10rem' }} className="nico" src={item.image}></img>
+                  <img style={{ width: '5rem' }} className="nico" src={item.image}></img>
                 </div>
                 <div className="col-md-3 mt-5 ">
                 <h1 className="">{item.title}</h1>
                 <div>
                 <span className="">su precio es:${item.price}</span>
                 </div>
-                <button className='bgbutton' onClick={() => deletProduct(item)}>
+                <button className='bgbuttond' onClick={() => deletProduct(item)}>
                 <Trash3Fill/>
                 </button>
 
@@ -54,13 +83,14 @@ function Carrito() {
 
             </div>
           )
-        })}</Modal.Body>
+        })} 
+        </Modal.Body>
         <Modal.Footer className='back'>
-          <Button className='bgbutton' onClick={handleClose}>
+          <Button className='bgbuttond textnavbar' onClick={handleClose}>
             Cerrar
           </Button>
-          <Button className='bgbutton' onClick={clearCart}>Borrar todo!</Button>
-          <Button className="bgbutton" onClick={handleClose}><Link to={"/cart"} className="bgbuttond">Terminar compra</Link>
+          <Button className='bgbuttond textnavbar' onClick={clearCart}>Borrar todo!</Button>
+          <Button className="bgbuttond textnavbar" onClick={handleClose}><Link to={"/cart"} className="bgnavbar">Terminar compra</Link>
           </Button>
         </Modal.Footer>
       </Modal>

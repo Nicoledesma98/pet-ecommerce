@@ -11,7 +11,7 @@ function ItemList({ products, title  }) {
         <div className="container">
             <div className="row row-cols-1 row-cols-md-1 g-4 ">
                 
-                <h1 className="martitulo">{title}
+                <h1 className="martitulo textfont">{title}
                 </h1>
                 <div className="card-group mx-5 mt-1">
                     <>

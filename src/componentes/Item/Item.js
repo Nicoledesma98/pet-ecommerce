@@ -11,12 +11,12 @@ const CardItem = ({ title, image, price, stock, id,cantidad}) => {
             <Card className="m-2 bgcard " style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={image} />
                 <Card.Body >
-                    <Card.Title>{title}</Card.Title>
+                    <Card.Title className="textfont">{title}</Card.Title>
                     <Card.Text>
                       ${price}
                     </Card.Text>
-                    <button className="px-5 bgbutton" variant="primary"><Link className="bglink" to={`/product/${id}`}>Detalle</Link></button>
-                    <button className="mt-2 px-5 bgbutton" onClick={() =>addItemCart({title, image, price, stock, id})}>Comprar</button>
+                    <button className="px-5 bgbutton textfont" variant="primary"><Link className="bglink" to={`/product/${id}`}>Detalle</Link></button>
+                    <button className="mt-2 px-5 bgbutton textfont" onClick={() =>addItemCart({title, image, price, stock, id})}>Comprar</button>
                 </Card.Body>
             </Card>
 

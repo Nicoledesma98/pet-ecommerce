@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
-import productos from "../../utils/productsMock";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import db from "../../utils/firebaseConfig"
@@ -22,7 +21,7 @@ const ItemListContainer = ({ title }) => {
 
 
 const getProducts = async () => {
-    const productCollection = collection(db, "productos")
+    const productCollection = collection(db, "producto")
     const productSnapshot = await getDocs(productCollection);
     const productList = productSnapshot.docs.map((doc) => {
         let product = doc.data()
@@ -36,7 +35,7 @@ const getProducts = async () => {
 }
 
 const filterFirebase = async () => {
-    const productRef = collection(db, 'productos')
+    const productRef = collection(db, 'producto')
     const queryResult = query(productRef, where("categoria", "==", category));
     const querySnapshot = await getDocs(queryResult);
     const productList = querySnapshot.docs.map((doc) => {
@@ -60,7 +59,7 @@ const filterFirebase = async () => {
 
         
          console.log("products:",products)
-        return (<div><ItemList products={products} title={title} /></div>);
+        return (<div><ItemList products={products} title={"Nuestros productos"} /></div>);
 
     }
 

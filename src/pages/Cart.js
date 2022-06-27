@@ -6,8 +6,13 @@ import { InputGroup, FormControl } from "react-bootstrap"
 import { addDoc, collection } from "firebase/firestore"
 import db from "../utils/firebaseConfig"
 import { Link } from "react-router-dom"
+
+
 const Cart = () => {
   const { cartListItems, totalPrice,clearCart,deletProduct} = useContext(CartContext)
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [formValue,setFormValue] = useState({
      nombre : " ",
      email : " ",
@@ -23,10 +28,10 @@ const Cart = () => {
         title : item.title,
         price : item.price
       }
-    }),
+    }), 
     total: totalPrice
   })
-  
+  console.log(order)
   const [success,setSuccess] = useState()
   
   
@@ -40,22 +45,19 @@ const Cart = () => {
     
   }
   const saveData = async (newOrder) =>{
-    const orderFirebase = collection(db,"ordenes")
+    const orderFirebase = collection(db,"compras")
     const orderDoc = await addDoc(orderFirebase,newOrder)
     console.log("orden generada:",orderDoc.id)
     setSuccess(orderDoc.id)
+     console.log("anda hasta aca,",orderDoc)
   }
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
 
   return (
     <div className="container-fluid marginb">
       <div className="table-responsive">
         <h1>Checkout:</h1>
         <div className="mt-5">
-          <table className="table table-sm bordertable">
+          <table className="table table-sm bordertable textfont">
             <thead>
               <tr >
                 <th scope="col"><h2>Productos:</h2></th>
@@ -82,7 +84,7 @@ const Cart = () => {
             })}
             <tr className="bordertable">
               <th scope="row"></th>
-              <td><h5 className="text-end">Subtotal: ${totalPrice}</h5></td>
+              <td><h5 className="text-end">Subtotal:$ {totalPrice}</h5></td>
             </tr>
             <tr className="bordertable">
               <th scope="row"></th>
@@ -93,7 +95,7 @@ const Cart = () => {
         </div>
       </div>
       <>
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="primary" className="textfont" onClick={handleShow}>
           Listo!
         </Button>
 

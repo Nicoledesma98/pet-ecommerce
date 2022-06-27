@@ -2,7 +2,7 @@ import { Form } from "react-bootstrap"
 import "./Estilos.css"
 const Contacto = () => {
     return (
-        <div className="container formulario backgroundform" >
+        <div className="container formulario backgroundform textfont" >
             <div className="row backgroundform">
                 <div className="col-md-4 m-3 mt-5 bgtransparent">
                     <input type="text" className="form-control " placeholder="Nombre" aria-label="Nombre"></input>

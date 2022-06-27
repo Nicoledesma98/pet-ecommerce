@@ -6,32 +6,32 @@ const Footer = () => {
             <div className="container py-4 bgnavbar">
                 <div className="row gy-4 gx-5 bgnavbar">
                     <div className="col-lg-4 col-md-6 bgnavbar">
-                        <h5 className="bgnavbar">Nuestros compañeros perfectos nunca tienen menos de cuatro patas.</h5>
+                        <h5 className="bgnavbar textfont">Nuestros compañeros perfectos nunca tienen menos de cuatro patas.</h5>
                     </div>
                     <div className="col-lg-2 col-md-6 bgnavbar">
-                        <ul className="list-unstyled text-muted bgnavbar">
-                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"/"} className="bgnavbar textnavbar">Inicio</Link></li>
-                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"/product"} className="bgnavbar textnavbar">Productos</Link></li>
-                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"categoria/perros"} className="bgnavbar textnavbar">Perros</Link></li>
-                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"categoria/gatos"} className="bgnavbar textnavbar">Gatos</Link></li>
-                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"/comollegar"} className="bgnavbar textnavbar">Como llegar</Link></li>
-                            <li className="bgnavbar"><img src='../huella.png' className='huella'/><Link to={"/Contacto"} className="bgnavbar textnavbar">Contacto</Link></li>
+                        <ul className="list-unstyled text-muted bgnavbar ">
+                            <li className="bgnavbar mb-3"><img src='../huella.png' className='huella'/><Link to={"/"} className="bgnavbar textnavbar">Inicio</Link></li>
+                            <li className="bgnavbar mb-3"><img src='../huella.png' className='huella'/><Link to={"/product"} className="bgnavbar textnavbar">Productos</Link></li>
+                            <li className="bgnavbar mb-3"><img src='../huella.png' className='huella'/><Link to={"categoria/perros"} className="bgnavbar textnavbar">Perros</Link></li>
+                            <li className="bgnavbar mb-3"><img src='../huella.png' className='huella'/><Link to={"categoria/gatos"} className="bgnavbar textnavbar">Gatos</Link></li>
+                            <li className="bgnavbar mb-3"><img src='../huella.png' className='huella'/><Link to={"/comollegar"} className="bgnavbar textnavbar">Como llegar</Link></li>
+                            <li className="bgnavbar mb-3"><img src='../huella.png' className='huella'/><Link to={"/Contacto"} className="bgnavbar textnavbar">Contacto</Link></li>
                         </ul>
                     </div>
                     <div className="col-lg-4 col-md-6 pt-4 bgnavbar">
-                        <h5 className="mb-3 bgnavbar">Promociones y Descuentos todos los meses!</h5>
-                        <p className="small pt-4 bgnavbar" > Suscribase para recibir nuevas promociones y descuentos</p>
+                        <h5 className="mb-3 bgnavbar textfont">Promociones y Descuentos todos los meses!</h5>
+                        <p className="small pt-4 bgnavbar textfont" > Suscribase para recibir nuevas promociones y descuentos</p>
                         <form action="#" className="bgnavbar">
-                            <div className="input-group mb-3 bgnavbar">
+                            <div className="input-group mb-3 bgnavbar textfont">
                                 <input className="form-control" type="text" placeholder="Ingrese su email"
                                     aria-label="Recipient's username" aria-describedby="button-addon2"></input>
                                 <button className="btn bgbutton btn-lg px-4 me-sm-3 fw-bold"
-                                    type="button">Suscribirse</button>
+                                    type="button textfont">Suscribirse</button>
                             </div>
                         </form>
                     </div>
                     <div className="col-lg-2 col-md-6 bgnavbar">
-                        <p className="bgnavbar">© 2022 Company, Inc. All rights reserved.</p>
+                        <p className="bgnavbar textfont">© 2022 Company, Inc. All rights reserved,ecommer hecha por Nicolas Ledesma</p>
                         <ul className="list-unstyled d-flex bgnavbar">
                             <li className="me-3"><svg xmlns="http://www.w3.org/2000/svg" width="30"
                                 height="30" fill="currentColor" className="bi bi-twitter bgnavbar" viewBox="0 0 16 16">
