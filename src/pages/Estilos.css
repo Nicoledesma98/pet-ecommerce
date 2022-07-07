@@ -24,7 +24,7 @@ background: linear-gradient(90deg, rgba(151,196,184,1) 11%, rgba(204,243,238,1) 
 }
 
 .pet {
-    width: 100px;
+    width: 50vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -59,4 +59,8 @@ background: linear-gradient(90deg, rgba(151,196,184,1) 11%, rgba(204,243,238,1) 
 }
 .letra {
     font-family: 'Share Tech Mono', monospace;
+}
+
+.error {
+    background-image: url("../../public/error-404.jpg")
 }

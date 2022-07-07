@@ -14,7 +14,6 @@ const ItemListContainer = ({ title }) => {
         setProducts([])
         getProducts()
             .then( (productos) => {
-                console.log("productosuseeffect: ", productos)
                 category ?  filterFirebase() : setProducts(productos)
 
 })}, [category])
@@ -26,12 +25,10 @@ const getProducts = async () => {
     const productList = productSnapshot.docs.map((doc) => {
         let product = doc.data()
         product.id = doc.id
-        console.log("product: ", product)
         return product
 
     })
     return productList
-    console.log("productList: ", productList)
 }
 
 const filterFirebase = async () => {
@@ -58,7 +55,6 @@ const filterFirebase = async () => {
 
 
         
-         console.log("products:",products)
         return (<div><ItemList products={products} title={"Nuestros productos"} /></div>);
 
     }

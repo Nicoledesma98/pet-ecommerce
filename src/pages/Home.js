@@ -8,16 +8,16 @@ const Inicio = () => {
     return (
         <div className='col-md-12'>
             <div className='marginb d-flex justify-content-center align-items-center textfont'>
-           <h1 className='me-5'>Bienvenidos a</h1><img src='../logo2.png' alt='logo' className='pet'/>
+           <img src='../logo2.png' alt='logo' className='pet'/>
         </div>
-        <h6 className='mt-4 textfont'>Aquí encontrarás los mejores y más lindos accesorios para mascotas</h6>
+        <h3 className='mt-4 textfont'>Aquí encontrarás los mejores y más lindos accesorios para mascotas</h3>
 
         <div className='imagenes'>
-            <img src='../carrousel1.jpg'/>
-            <img src='../carrousel2.jpg'/>
-            <img src='../perro-acdc.jpg'/>
-            <img src='../pretal-gato.jpg'/>
-            <img src='../pretal-perro.jpg'/>
+            <img src='../carrousel3.jpg' alt='imagen perro collar'/>
+            <img src='../carrousel2.jpg' alt='imagen gato collar'/>
+            <img src='../perro-acdc.jpg' alt='imagen perro acdc'/>
+            <img src='../collar-gato2.jpg' alt='imagen gato collar fucsia'/>
+            <img src='../cama-gato.jpg' alt='imagen gato collar con cascabel'/>
 
         </div>
         <ItemListContainer title={"Productos recomendados"}/>

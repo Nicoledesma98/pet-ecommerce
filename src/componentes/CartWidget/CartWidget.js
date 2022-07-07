@@ -37,31 +37,6 @@ function Carrito() {
         
           {cartListItems.map((item) => {
           return (
-        //   <div>
-        //     <Table responsive="sm">
-            
-        //              <thead>
-        //       <tr>
-        //         <th>producto</th>
-        //         <th>cantidad</th>
-        //         <th>precio</th>
-        //         <th>eliminar</th>
-        //       </tr>
-        //     </thead>
-            
-                 
-        //   <div>
-        // <tbody>
-        //   <tr>
-        //     <td><img style={{ width: '5rem' }} className="nico" src={item.image}/></td>
-        //     <td>Table cell</td>
-        //     <td>Table cell</td>
-        //     <td>Table cell</td>
-        //   </tr>
-        // </tbody>
-        //     </div>
-        //      </Table>
-        //      </div>
         
             <div className="Container" key={item.id}>
               <div className="row">

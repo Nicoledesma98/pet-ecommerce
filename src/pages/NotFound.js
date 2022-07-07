@@ -1,8 +1,13 @@
 const NotFound = () =>{
     return (
-        <div>
-            Error esta pagina no se encontro!
+        <>
+        <div className="col-md-6 error">
+         <h1>
+         </h1>
         </div>
+        
+        </>
+        
     )
 }
 
