@@ -24,9 +24,9 @@ const Cart = () => {
     buyer: {},
     items: cartListItems.map((item)=>{
       return {
-        id : item.id,
-        title : item.title,
-        price : item.price
+        id : item.data.id,
+        title : item.data.title,
+        price : item.data.price
       }
     }), 
     total: totalPrice
@@ -68,14 +68,13 @@ const Cart = () => {
               </tr>
             </thead>
             {cartListItems.map((item) => {
-              const { id, image, price, title } = item
               return (
                 <tbody className="bordertable">
-                  <tr key={id}>
-                    <th scope="row" ><img src={image} alt="imagen del producto" style={{ width: '5rem' }} /></th>
-                    <td>{title}</td>
-                    <td>1</td>
-                    <td>${price}</td>
+                  <tr key={item.data.id}>
+                    <th scope="row" ><img src={item.data.image} alt="imagen del producto" style={{ width: '5rem' }} /></th>
+                    <td>{item.data.title}</td>
+                    <td>{item.data.quantity}</td>
+                    <td>${item.data.price}</td>
                     <td><button className="bgbutton p-4" onClick={()=> deletProduct (item)}><Trash className="bgtransparent" /></button></td>
                   </tr>
 
@@ -103,8 +102,8 @@ const Cart = () => {
 
         <Modal show={show} onHide={handleClose} animation={true} className="modalback">
 
-          <Modal.Header closeButton>
-            <Modal.Title>{(success) ? "operacion generada con exito" : ("Datos del comprador")}</Modal.Title>
+          <Modal.Header className="bgnavbar" closeButton>
+            <Modal.Title className="bgnavbar">{(success) ? "operacion generada con exito" : ("Datos del comprador")}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             {(success) ? (
@@ -152,8 +151,8 @@ const Cart = () => {
                 onChange={handleChange}
                 />
               </InputGroup>
-              <Button variant="secondary" onClick={handleClose}>Cerrar</Button>
-              <button type="submit">Enviar!</button>
+              <Button className="bgbuttond" onClick={handleClose}>Cerrar</Button>
+              <Button className="bgbuttond" type="submit">Enviar!</Button>
             </form>)
           }
             

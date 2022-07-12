@@ -11,7 +11,7 @@ import { Table } from 'react-bootstrap';
 function Carrito() {
   const { cartListItems,clearCart,deletProduct } = useContext(CartContext)
   const [show, setShow] = useState(false);
-
+console.log("esto es cartlist",cartListItems)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
@@ -37,17 +37,18 @@ function Carrito() {
         
           {cartListItems.map((item) => {
           return (
-        
-            <div className="Container" key={item.id}>
+            <div className="Container" key={item.data.id}>
               <div className="row">
                 <div className="col-md-8 mt-5">
-                  <img style={{ width: '5rem' }} className="nico" src={item.image}></img>
+                  <img style={{ width: '5rem' }} className="nico" src={item.data.image}></img>
                 </div>
                 <div className="col-md-3 mt-5 ">
-                <h1 className="">{item.title}</h1>
+                <h1 className="">{item.data.title}</h1>
                 <div>
-                <span className="">su precio es:${item.price}</span>
+                <span className="">su precio es:${item.data.price}</span>
+                <span>su cantidad es: {item.data.quantity}</span>
                 </div>
+                
                 <button className='bgbuttond' onClick={() => deletProduct(item)}>
                 <Trash3Fill/>
                 </button>

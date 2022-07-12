@@ -22,7 +22,6 @@ const ItemCount = ({ setCantidad, cantidad, setShowButton,stock, data}) => {
         setShowButton(true)
         addItemCart({data:product})
 
-
     }
 
     const addCount = () => {
@@ -47,7 +46,7 @@ const ItemCount = ({ setCantidad, cantidad, setShowButton,stock, data}) => {
 
                 <button className="px-5 bgbutton mt-2" onClick={addCount}>+</button>
             </div>
-            <button className="mt-2 px-5 bgbutton textfont" onClick={() => addProduct()}>Agregar al Carrito</button>
+            <button className="mt-2 px-5 bgbutton textfont" onClick={() =>addProduct(data)}>Agregar al Carrito</button>
         </>
     )
 }

@@ -30,6 +30,7 @@ const getProduct = async () => {
 // const productFilter =  productos.find ((product) =>{
 //     return product.id == id
 // })
+console.log("esto es item ",item)
 
 return (
     <div>
