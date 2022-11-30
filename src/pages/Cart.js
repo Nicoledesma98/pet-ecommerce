@@ -6,7 +6,9 @@ import { InputGroup, FormControl } from "react-bootstrap"
 import { addDoc, collection } from "firebase/firestore"
 import db from "../utils/firebaseConfig"
 import { Link } from "react-router-dom"
-
+import Container from "react-bootstrap/esm/Container"
+import Row from "react-bootstrap/esm/Row"
+import Col from "react-bootstrap/esm/Col"
 
 const Cart = () => {
   const { cartListItems, totalPrice,clearCart,deletProduct} = useContext(CartContext)
@@ -53,7 +55,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="container-fluid marginb">
+    <Container className=" marginb">
       <div className="table-responsive">
         <h1>Checkout:</h1>
         <div className="mt-5">
@@ -75,7 +77,7 @@ const Cart = () => {
                     <td>{item.data.title}</td>
                     <td>{item.data.quantity}</td>
                     <td>${item.data.price}</td>
-                    <td><button className="bgbutton p-4" onClick={()=> deletProduct (item)}><Trash className="bgtransparent" /></button></td>
+                    <td><button className="bgbutton shadow-inset-center p-4" onClick={()=> deletProduct (item)}><Trash className="bgtransparent" /></button></td>
                   </tr>
 
                 </tbody>
@@ -94,14 +96,12 @@ const Cart = () => {
         </div>
       </div>
       <>
-        <Button variant="primary" className="textfont" onClick={handleShow}>
+        <button className="textfont bgbuttonc shadow-inset-center mb-5" onClick={handleShow}>
           Listo!
-        </Button>
-
-
-
-        <Modal show={show} onHide={handleClose} animation={true} className="modalback">
-
+        </button>
+   
+    
+   <Modal show={show} onHide={handleClose} animation={true} className="modalback">
           <Modal.Header className="bgnavbar" closeButton>
             <Modal.Title className="bgnavbar">{(success) ? "operacion generada con exito" : ("Datos del comprador")}</Modal.Title>
           </Modal.Header>
@@ -161,8 +161,7 @@ const Cart = () => {
         </Modal>
 
       </>
-    </div>
-
+</Container>
   )
 }
 
